@@ -1,0 +1,141 @@
+[
+  {
+    "id": 1,
+    "price_uzs": 2462000,
+    "image_url": "file:///C:/Users/User/Desktop/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%BA%D0%B0%20(%D0%A3%D0%A8%D0%9C)%20125%20%D0%BC%D0%BC%20Metabo%20WEV%2010-125%20Quick.png",
+    "description": "Болгарка (УШМ) 125 мм Metabo WEV 10-125 Quick",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "price_uzs": 470000,
+    "image_url": "file:///C:/Users/User/Desktop/%D0%9A%D0%BE%D0%BC%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%BE%D1%80%D0%BD%D1%8B%D0%B9%20%D0%B8%D0%BD%D0%B3%D0%B0%D0%BB%D1%8F%D1%82%D0%BE%D1%80%20Ulaizer%20Home%20CN-02MY.png",
+    "description": "Компрессорный ингалятор Ulaizer Home CN-02MY",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "price_uzs": 1500000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/dda5f2343e9f58bf709ddbfdaf1499652024111918345790140ymlvnP0qY9.png.webp",
+    "description": "Электронные детские весы Electronic Baby Scale",
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "price_uzs": 4519000,
+    "image_url": "https://assets.asaxiy.uz/product/items/desktop/6ad5450fdd138ae2614fed97f0bc55012025102815595541099ctktKcGSkh.webp",
+    "description": "Смартфон HONOR X9d 5G 8/256 GB, Red"
+  },
+  {
+    "id": 5,
+    "price_uzs": 5299000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b20250701131207596183xlP5tZ0uu.webp",
+    "description": "Кондиционер TCL CITY 18 Inverter",
+    "rating": 4.9
+  },
+  {
+    "id": 6,
+    "price_uzs": 4239000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/c81e728d9d4c2f636f067f89cc14862c2024060716462915981SZgCU54tkv.jpg.webp",
+    "description": "Телевизор Moonx Webos 55MW800 4K UHD Smart TV",
+    "rating": 4.8
+  },
+  {
+    "id": 7,
+    "price_uzs": 1899000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b2024072312260328822Xt3Un7A5Ip.jpg.webp",
+    "description": "Пылесос Karcher WD 3 V-17/4/20",
+    "rating": 4.7
+  },
+  {
+    "id": 8,
+    "price_uzs": 699000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/96a3be3cf272e017046d1b2674a52bd320210917095324543883cHhMYIGU7.jpg.webp",
+    "description": "Утюг Philips DST5020",
+    "rating": 4.8
+  },
+  {
+    "id": 9,
+    "price_uzs": 1599000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b2024052415425926098DkFsSrTRcB.jpg.webp",
+    "description": "Монитор 2E 27 Full HD F2723B",
+    "rating": 5
+  },
+  {
+    "id": 10,
+    "price_uzs": 2289000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/698d51a19d8a121ce581499d7b7016682025011516350658625uLpEsZI1Hs.jpg.webp",
+    "description": "Смартфон Xiaomi Redmi Note 14 6/128GB Lime Green",
+    "rating": 5
+  },
+  {
+    "id": 11,
+    "price_uzs": 699000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b2023062210415049254NJP9v6Dtlg.jpg.webp",
+    "description": "Беспроводные наушники Belkin Soundform Rise True Wireless White",
+    "rating": 5
+  },
+  {
+    "id": 12,
+    "price_uzs": 3839000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b2023090817572211412LVuBwZeHI7.jpg.webp",
+    "description": "Морозильный ларь ARDESTO FRM-200ECM",
+    "rating": 5
+  },
+  {
+    "id": 13,
+    "price_uzs": 1869000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/eb160de1de89d9058fcb0b968dbbbd682024011811534791389IqRUgLuqnZ.jpg.webp",
+    "description": "Смартфон TECNO Spark 20 8/128GB Neon Gold",
+    "rating": 5
+  },
+  {
+    "id": 14,
+    "price_uzs": 99000,
+    "image_url": "https://assets.asaxiy.uz/product/items/desktop/b8d96492125a89e3e8be153c6006ced42025090816282585257s8ozjQHpGA.jpg",
+    "description": "Элияҳу М. Голдратт: Мақсад. Узлуксиз такомиллашув жараёни. ПРЕМЬЕРА!",
+    "rating": 5
+  },
+  {
+    "id": 15,
+    "price_uzs": 10209000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/faf5f2153dee9890f0f2428518316f252024092716401831553rd1nFjptkW.webp",
+    "description": "Смартфон Apple iPhone 16 128GB (1 SIM) Nanosim+esim Black",
+    "rating": 5
+  },
+  {
+    "id": 16,
+    "price_uzs": 6759000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/96a3be3cf272e017046d1b2674a52bd32023013113303135239eP09fXuJby.jpg.webp",
+    "description": "Пылесос Dyson V15 Detect Absolute",
+    "rating": 3.3
+  },
+  {
+    "id": 17,
+    "price_uzs": 649000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/5db2ef2a70e04ec761b7ea0841aa8d9b2024073010145829725eSnmgC5gPd.jpeg.webp",
+    "description": "Smart TV приставка Xiaomi Mi TV Stick 4K , Black",
+    "rating": 3.6
+  },
+  {
+    "id": 18,
+    "price_uzs": 3559000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/c4ca4238a0b923820dcc509a6f75849b20231211115721559520FTq9s4r1P.jpg.webp",
+    "description": "Парогенератор Braun CareStyle 7 Pro IS7286BK",
+    "rating": 5
+  },
+  {
+    "id": 19,
+    "price_uzs": 3159000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/7ef605fc8dba5425d6965fbd4c8fbe1f2025011517435514784Y5qc4v0dYO.jpg.webp",
+    "description": "Смартфон Xiaomi Redmi Note 14 Pro 8/256GB Midnight Black",
+    "rating": 5
+  },
+  {
+    "id": 20,
+    "price_uzs": 1549000,
+    "image_url": "https://cdn.asaxiy.uz/asaxiy-content/product/items/desktop/593e1045b5f6eb6db7aa65d3e285bf142025061711502651794Ee1lDuiA7j.webp",
+    "description": "Смартфон HONOR X6c 6/128GB Океанический голубой",
+    "rating": 5
+  }
+]
