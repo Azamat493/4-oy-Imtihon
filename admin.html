@@ -84,6 +84,64 @@
               placeholder="https://example.com/image.jpg"
             />
           </div>
+          <div class="mb-4 flex items-center gap-6">
+            <label class="flex items-center gap-2 text-gray-700 font-medium">
+              <input
+                type="checkbox"
+                name="inStock"
+                value="true"
+                class="stock-checkbox h-5 w-5 text-blue-500 rounded focus:ring-2 focus:ring-blue-400"
+              />
+              В наличии
+            </label>
+            <label class="flex items-center gap-2 text-gray-700 font-medium">
+              <input
+                type="checkbox"
+                name="inStock"
+                value="false"
+                class="stock-checkbox h-5 w-5 text-red-500 rounded focus:ring-2 focus:ring-red-400"
+              />
+              Нет в наличии
+            </label>
+          </div>
+          <div class="mb-4 flex items-center gap-2">
+            <label class="flex items-center gap-2 text-gray-700 font-medium">
+              <input type="checkbox" name="isDiscounted" />
+              Скидка
+            </label>
+          </div>
+          <div class="mb-4 discount-field hidden">
+            <label class="block text-gray-700 font-medium mb-1"
+              >Процент скидки:</label
+            >
+            <input
+              type="number"
+              name="discountPercent"
+              min="0"
+              max="100"
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400 transition"
+              placeholder="20"
+            />
+          </div>
+          <div class="mb-4 flex items-center gap-2">
+            <label class="flex items-center gap-2 text-gray-700 font-medium">
+              <input type="checkbox" name="hasRating" />
+              Рейтинг
+            </label>
+          </div>
+          <div class="mb-4 rating-field hidden">
+            <label class="block text-gray-700 font-medium mb-1"
+              >Рейтинг (1-5):</label
+            >
+            <input
+              type="number"
+              name="rating"
+              min="1"
+              max="5"
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+              placeholder="5"
+            />
+          </div>
           <div class="mb-4">
             <label class="block text-gray-700 font-medium mb-1"
               >Теги (через запятую):</label
@@ -92,26 +150,8 @@
               type="text"
               name="tags"
               class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-              placeholder="популярный, новый"
+              placeholder="popular, new, discount, bestseller"
             />
-          </div>
-          <div class="mb-6 flex items-center gap-6">
-            <label class="flex items-center gap-2 text-gray-700 font-medium">
-              <input
-                type="checkbox"
-                name="inStock"
-                class="h-5 w-5 text-blue-500 rounded focus:ring-2 focus:ring-blue-400"
-              />
-              В наличии
-            </label>
-            <label class="flex items-center gap-2 text-gray-700 font-medium">
-              <input
-                type="checkbox"
-                name="isDiscounted"
-                class="h-5 w-5 text-red-500 rounded focus:ring-2 focus:ring-red-400"
-              />
-              Скидка
-            </label>
           </div>
           <button
             type="submit"
@@ -126,6 +166,7 @@
         ></div>
       </div>
     </section>
+
     <script src="./js/admin.js"></script>
   </body>
 </html>
