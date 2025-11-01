@@ -209,7 +209,8 @@
             <a href="./index.html">
               <img src="./images/Link.png" alt="Zon.uz" class="" />
             </a>
-            <button
+            <a href="./admin.html">
+              <button
               class="flex items-center cursor-pointer gap-2 px-4 py-2 border rounded-[5px] border-solid border-[#011c47] font-bold text-base text-[#011c47] font-family transition-colors duration-300 hover:bg-[#011c47] hover:text-white max-mddd:hidden"
             >
               <svg
@@ -228,8 +229,9 @@
                   d="M10.5 3.75C10.5 2.50781 9.49219 1.5 8.25 1.5H3.75C2.50781 1.5 1.5 2.50781 1.5 3.75V8.25C1.5 9.49219 2.50781 10.5 3.75 10.5H8.25C9.49219 10.5 10.5 9.49219 10.5 8.25V3.75ZM22.5 15.75C22.5 14.5078 21.4922 13.5 20.25 13.5H15.75C14.5078 13.5 13.5 14.5078 13.5 15.75V20.25C13.5 21.4922 14.5078 22.5 15.75 22.5H20.25C21.4922 22.5 22.5 21.4922 22.5 20.25V15.75Z"
                 />
               </svg>
-              Каталог
+              Админ
             </button>
+            </a>
           </div>
           <div
             class="flex-1 relative max-w-[772px] mx-4 max-md:mx-0 max-md:max-w-none"
@@ -311,26 +313,22 @@
               </svg>
               <span class="font-bold text-base text-black font-family">RU</span>
             </button>
-            <button class="p-2 cursor-pointer group max-md:hidden">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="transition-transform cursor-pointer duration-300 ease-in-out group-hover:scale-110"
-              >
-                <path
-                  opacity="0.4"
-                  d="M10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20ZM6.63281 6.45703C6.94141 5.58594 7.76953 5 8.69531 5H10.9727C12.3359 5 13.4375 6.10547 13.4375 7.46484C13.4375 8.34766 12.9648 9.16406 12.1992 9.60547L10.9375 10.3281C10.9297 10.8359 10.5117 11.25 10 11.25C9.48047 11.25 9.0625 10.832 9.0625 10.3125V9.78516C9.0625 9.44922 9.24219 9.14062 9.53516 8.97266L11.2656 7.98047C11.4492 7.875 11.5625 7.67969 11.5625 7.46875C11.5625 7.14062 11.2969 6.87891 10.9727 6.87891H8.69531C8.5625 6.87891 8.44531 6.96094 8.40234 7.08594L8.38672 7.13281C8.21484 7.62109 7.67578 7.875 7.19141 7.70312C6.70703 7.53125 6.44922 6.99219 6.62109 6.50781L6.63672 6.46094L6.63281 6.45703ZM8.75 13.75C8.75 13.4185 8.8817 13.1005 9.11612 12.8661C9.35054 12.6317 9.66848 12.5 10 12.5C10.3315 12.5 10.6495 12.6317 10.8839 12.8661C11.1183 13.1005 11.25 13.4185 11.25 13.75C11.25 14.0815 11.1183 14.3995 10.8839 14.6339C10.6495 14.8683 10.3315 15 10 15C9.66848 15 9.35054 14.8683 9.11612 14.6339C8.8817 14.3995 8.75 14.0815 8.75 13.75Z"
-                  fill="#6682A9"
+            <div
+              class="flex items-start gap-2 mr-3 max-md:hidden cursor-pointer group transition-all duration-300"
+            >
+              <a href="./favorites.html" class="relative">
+                <img
+                  src="./images/photo_2025-10-30_14-48-56.jpg"
+                  alt=""
+                  class="w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-300 group-hover:scale-110"
                 />
-                <path
-                  d="M8.69533 5C7.76955 5 6.94533 5.58203 6.63283 6.45703L6.6172 6.50391C6.44533 6.99219 6.69924 7.52734 7.18752 7.69922C7.6758 7.87109 8.21095 7.61719 8.38283 7.12891L8.39845 7.08203C8.44142 6.95703 8.56252 6.875 8.69142 6.875H10.9688C11.2969 6.875 11.5586 7.14063 11.5586 7.46484C11.5586 7.67578 11.4453 7.87109 11.2617 7.97656L9.53127 8.96875C9.2383 9.13672 9.05861 9.44531 9.05861 9.78125V10.3125C9.05861 10.832 9.47658 11.25 9.99611 11.25C10.5078 11.25 10.9258 10.8398 10.9336 10.3281L12.1953 9.60547C12.961 9.16406 13.4336 8.34766 13.4336 7.46484C13.4336 6.10156 12.3281 5 10.9688 5H8.69533ZM10 15C10.3315 15 10.6495 14.8683 10.8839 14.6339C11.1183 14.3995 11.25 14.0815 11.25 13.75C11.25 13.4185 11.1183 13.1005 10.8839 12.8661C10.6495 12.6317 10.3315 12.5 10 12.5C9.6685 12.5 9.35055 12.6317 9.11613 12.8661C8.88171 13.1005 8.75002 13.4185 8.75002 13.75C8.75002 14.0815 8.88171 14.3995 9.11613 14.6339C9.35055 14.8683 9.6685 15 10 15Z"
-                  fill="#6682A9"
-                />
-              </svg>
-            </button>
+                <span
+                  id="favorites-counter-desktop"
+                  class="absolute -top-2 -right-2 bg-blue-600 text-white text-[10px] sm:text-xs w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center rounded-full"
+                  >0</span
+                >
+              </a>
+            </div>
             <button
               class="px-4 py-2 bg-[#5d78ff] md:block hidden cursor-pointer rounded-[5px] font-medium text-sm text-center text-white font-family hover:bg-blue-700 transition-colors"
             >
@@ -545,8 +543,8 @@
                   >0</span
                 >
                 <svg
-                  width="40"
-                  height="40"
+                  width="30"
+                  height="30"
                   viewBox="0 0 23 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -564,14 +562,14 @@
                 </svg>
               </button>
               </a>
-              <button class="flex cursor-pointer group items-center gap-2">
+              <button class="flex mb-1 cursor-pointer group items-center gap-2">
                 <svg
-                  width="40"
-                  height="40"
+                  width="30"
+                  height="30"
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="transition-transform cursor-pointer duration-300 ease-in-out group-hover:scale-110"
+                  class="transition-transform mb-1 cursor-pointer duration-300 ease-in-out group-hover:scale-110"
                 >
                   <path
                     opacity="0.4"
@@ -583,30 +581,26 @@
                     fill="#6682A9"
                   />
                 </svg>
-                <span class="font-bold text-[30px] text-black font-family"
+                <span class="font-bold text-[25px] text-black font-family"
                   >RU</span
                 >
               </button>
-              <button class="cursor-pointer group">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="transition-transform cursor-pointer duration-300 ease-in-out group-hover:scale-110"
+              <div
+              class="flex items-start mb-1 gap-2 cursor-pointer group transition-all duration-300"
+            >
+              <a href="./favorites.html" class="relative">
+                <img
+                  src="./images/photo_2025-10-30_14-48-56.jpg"
+                  alt=""
+                  class="w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-300 group-hover:scale-110"
+                />
+                <span
+                  id="favorites-counter-mobile"
+                  class="absolute -top-2 -right-2 bg-blue-600 text-white text-[10px] sm:text-xs w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center rounded-full"
+                  >0</span
                 >
-                  <path
-                    opacity="0.4"
-                    d="M10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20ZM6.63281 6.45703C6.94141 5.58594 7.76953 5 8.69531 5H10.9727C12.3359 5 13.4375 6.10547 13.4375 7.46484C13.4375 8.34766 12.9648 9.16406 12.1992 9.60547L10.9375 10.3281C10.9297 10.8359 10.5117 11.25 10 11.25C9.48047 11.25 9.0625 10.832 9.0625 10.3125V9.78516C9.0625 9.44922 9.24219 9.14062 9.53516 8.97266L11.2656 7.98047C11.4492 7.875 11.5625 7.67969 11.5625 7.46875C11.5625 7.14062 11.2969 6.87891 10.9727 6.87891H8.69531C8.5625 6.87891 8.44531 6.96094 8.40234 7.08594L8.38672 7.13281C8.21484 7.62109 7.67578 7.875 7.19141 7.70312C6.70703 7.53125 6.44922 6.99219 6.62109 6.50781L6.63672 6.46094L6.63281 6.45703ZM8.75 13.75C8.75 13.4185 8.8817 13.1005 9.11612 12.8661C9.35054 12.6317 9.66848 12.5 10 12.5C10.3315 12.5 10.6495 12.6317 10.8839 12.8661C11.1183 13.1005 11.25 13.4185 11.25 13.75C11.25 14.0815 11.1183 14.3995 10.8839 14.6339C10.6495 14.8683 10.3315 15 10 15C9.66848 15 9.35054 14.8683 9.11612 14.6339C8.8817 14.3995 8.75 14.0815 8.75 13.75Z"
-                    fill="#6682A9"
-                  />
-                  <path
-                    d="M8.69533 5C7.76955 5 6.94533 5.58203 6.63283 6.45703L6.6172 6.50391C6.44533 6.99219 6.69924 7.52734 7.18752 7.69922C7.6758 7.87109 8.21095 7.61719 8.38283 7.12891L8.39845 7.08203C8.44142 6.95703 8.56252 6.875 8.69142 6.875H10.9688C11.2969 6.875 11.5586 7.14063 11.5586 7.46484C11.5586 7.67578 11.4453 7.87109 11.2617 7.97656L9.53127 8.96875C9.2383 9.13672 9.05861 9.44531 9.05861 9.78125V10.3125C9.05861 10.832 9.47658 11.25 9.99611 11.25C10.5078 11.25 10.9258 10.8398 10.9336 10.3281L12.1953 9.60547C12.961 9.16406 13.4336 8.34766 13.4336 7.46484C13.4336 6.10156 12.3281 5 10.9688 5H8.69533ZM10 15C10.3315 15 10.6495 14.8683 10.8839 14.6339C11.1183 14.3995 11.25 14.0815 11.25 13.75C11.25 13.4185 11.1183 13.1005 10.8839 12.8661C10.6495 12.6317 10.3315 12.5 10 12.5C9.6685 12.5 9.35055 12.6317 9.11613 12.8661C8.88171 13.1005 8.75002 13.4185 8.75002 13.75C8.75002 14.0815 8.88171 14.3995 9.11613 14.6339C9.35055 14.8683 9.6685 15 10 15Z"
-                    fill="#6682A9"
-                  />
-                </svg>
-              </button>
+              </a>
+            </div>
             </div>
             <button
               class="px-4 py-2 bg-[#5d78ff] cursor-pointer rounded-[5px] font-medium text-sm text-center text-white font-family hover:bg-blue-700 transition-colors"
@@ -939,7 +933,7 @@
         </div>
       </section>
     </main>
-    <footer class="bg-white mb-10 mt-10">
+    <footer class="bg-white mb-5 mt-10">
       <div class="max-w-[1920px] w-[78%] mx-auto px-4">
         <div
           class="grid grid-cols-4 gap-4 max-lg:grid-cols-1 max-3xl:grid-cols-2"
@@ -1205,6 +1199,8 @@
         },
       });
     </script>
-    <script src="../js/main.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/favorites.js"></script>
   </body>
 </html>

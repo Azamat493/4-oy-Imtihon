@@ -1,4 +1,6 @@
-
+// ==========================
+// FAVORITES
+// ==========================
 function getFavorites() {
   try {
     const data = JSON.parse(localStorage.getItem("favorites"));
@@ -10,7 +12,17 @@ function getFavorites() {
 
 function saveFavorites(favorites) {
   localStorage.setItem("favorites", JSON.stringify(favorites));
+  updateFavoritesCounter();
   renderCart();
+}
+
+function updateFavoritesCounter() {
+  const favorites = getFavorites();
+  const count = favorites.length;
+  const counters = document.querySelectorAll(
+    ".favorites-counter, .favorites-count, #favorites-counter-mobile, #favorites-counter-desktop"
+  );
+  counters.forEach((el) => (el.textContent = count));
 }
 
 function getFavoriteSvg(isFav) {
@@ -23,6 +35,7 @@ function toggleFavorite(product, button) {
   const favorites = getFavorites();
   const index = favorites.findIndex((p) => p.id === product.id);
   let isFav;
+
   if (index === -1) {
     favorites.push(product);
     isFav = true;
@@ -30,11 +43,15 @@ function toggleFavorite(product, button) {
     favorites.splice(index, 1);
     isFav = false;
   }
+
   button.innerHTML = getFavoriteSvg(isFav);
   saveFavorites(favorites);
+  updateFavoritesCounter(); // ✅ обновляем счётчик сразу
 }
 
-
+// ==========================
+// CART
+// ==========================
 function getCart() {
   try {
     const data = JSON.parse(localStorage.getItem("cart"));
@@ -49,29 +66,28 @@ function saveCart(cart) {
   renderCart();
 }
 
-
 function updateCartCounters(cart) {
-  const countElements = document.querySelectorAll(".cart-count"); 
-  const totalElements = document.querySelectorAll(".cart-total"); 
-  const headerTotal = document.getElementById("cart-total-header"); 
+  const countElements = document.querySelectorAll(".cart-count");
+  const totalElements = document.querySelectorAll(".cart-total");
+  const headerTotal = document.getElementById("cart-total-header");
 
-  const totalItems = cart.length; 
+  const totalItems = cart.length;
   const totalPrice = cart.reduce(
     (sum, item) => sum + (item.price_uzs || 0) * (item.quantity || 1),
     0
   );
 
- 
   countElements.forEach((el) => (el.textContent = totalItems));
-
- 
-  totalElements.forEach((el) => (el.textContent = totalPrice.toLocaleString() + " сум"));
-
-
-  if (headerTotal) headerTotal.textContent = totalPrice.toLocaleString() + " сум";
+  totalElements.forEach(
+    (el) => (el.textContent = totalPrice.toLocaleString() + " сум")
+  );
+  if (headerTotal)
+    headerTotal.textContent = totalPrice.toLocaleString() + " сум";
 }
 
-
+// ==========================
+// RENDER CART
+// ==========================
 function renderCart() {
   const cartItemsDiv = document.getElementById("cart-items");
   if (!cartItemsDiv) return;
@@ -87,13 +103,13 @@ function renderCart() {
 
     const card = document.createElement("div");
     card.className =
-      "flex flex-col sm:flex-row justify-between gap-5 items-start sm:items-center border-b border-gray-200 pb-4 sm:pb-6";
+      "flex flex-col md:flex-row justify-between gap-5 items-start sm:items-center border-b border-gray-200 pb-4 sm:pb-6";
 
     card.innerHTML = `
-      <div class="flex items-start sm:items-center space-x-4 w-full sm:w-2/3">
-        <img src="${product.image_url}" alt="${product.description}" class="w-20 h-20 object-contain rounded-md" />
+      <div class="flex items-start sm:items-center space-x-4 w-full md:w-2/3">
+        <img src="${product.image_url}" alt="${product.description}" class="w-40 h-40 object-contain rounded-md" />
         <div class="flex-1">
-          <h3 class="text-sm sm:text-base font-medium text-gray-900">${product.description}</h3>
+          <h3 class="text-sm md:text-base font-medium text-gray-900">${product.description}</h3>
           <div class="flex items-center space-x-2 mt-1">
             <button data-action="favorite" class="p-1 cursor-pointer rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
               ${getFavoriteSvg(isFavorite)}
@@ -106,14 +122,14 @@ function renderCart() {
       <div class="flex items-center space-x-3 mt-3 sm:mt-0 w-full md:w-1/3 justify-between">
         <span class="font-bold text-sm sm:text-base">${price.toLocaleString()} сум</span>
         <div class="flex items-center space-x-1">
-          <button data-action="decrease" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 transition-colors">−</button>
+          <button data-action="decrease" class="px-2 py-1 cursor-pointer bg-gray-200 rounded hover:bg-gray-300 transition-colors">−</button>
           <span class="px-2 py-1 bg-blue-600 text-white rounded text-sm">${qty}</span>
-          <button data-action="increase" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 transition-colors">+</button>
+          <button data-action="increase" class="px-2 py-1 bg-gray-200 cursor-pointer rounded hover:bg-gray-300 transition-colors">+</button>
         </div>
       </div>
     `;
 
-
+    // Кол-во
     card.querySelector('[data-action="increase"]').addEventListener("click", () => {
       product.quantity += 1;
       saveCart(cart);
@@ -129,20 +145,25 @@ function renderCart() {
       saveCart(cart);
     });
 
+    // Удалить товар
     card.querySelector('[data-action="remove"]').addEventListener("click", () => {
       const filtered = cart.filter((p) => p.id !== product.id);
       saveCart(filtered);
     });
 
+    // Лайк
     card.querySelector('[data-action="favorite"]').addEventListener("click", (e) => {
       toggleFavorite(product, e.currentTarget);
+      updateFavoritesCounter(); // ✅ мгновенное обновление
     });
 
     cartItemsDiv.appendChild(card);
   });
 
   updateCartCounters(cart);
+  updateFavoritesCounter(); // ✅ при каждом рендере
 }
 
-
+// ==========================
 renderCart();
+updateFavoritesCounter(); // ✅ при загрузке страницы
