@@ -1,6 +1,4 @@
-// ==========================
-// FAVORITES
-// ==========================
+
 function getFavorites() {
   try {
     const data = JSON.parse(localStorage.getItem("favorites"));
@@ -46,12 +44,10 @@ function toggleFavorite(product, button) {
 
   button.innerHTML = getFavoriteSvg(isFav);
   saveFavorites(favorites);
-  updateFavoritesCounter(); // ✅ обновляем счётчик сразу
+  updateFavoritesCounter(); 
 }
 
-// ==========================
-// CART
-// ==========================
+
 function getCart() {
   try {
     const data = JSON.parse(localStorage.getItem("cart"));
@@ -85,9 +81,7 @@ function updateCartCounters(cart) {
     headerTotal.textContent = totalPrice.toLocaleString() + " сум";
 }
 
-// ==========================
-// RENDER CART
-// ==========================
+
 function renderCart() {
   const cartItemsDiv = document.getElementById("cart-items");
   if (!cartItemsDiv) return;
@@ -129,7 +123,7 @@ function renderCart() {
       </div>
     `;
 
-    // Кол-во
+
     card.querySelector('[data-action="increase"]').addEventListener("click", () => {
       product.quantity += 1;
       saveCart(cart);
@@ -145,25 +139,24 @@ function renderCart() {
       saveCart(cart);
     });
 
-    // Удалить товар
+
     card.querySelector('[data-action="remove"]').addEventListener("click", () => {
       const filtered = cart.filter((p) => p.id !== product.id);
       saveCart(filtered);
     });
 
-    // Лайк
     card.querySelector('[data-action="favorite"]').addEventListener("click", (e) => {
       toggleFavorite(product, e.currentTarget);
-      updateFavoritesCounter(); // ✅ мгновенное обновление
+      updateFavoritesCounter(); 
     });
 
     cartItemsDiv.appendChild(card);
   });
 
   updateCartCounters(cart);
-  updateFavoritesCounter(); // ✅ при каждом рендере
+  updateFavoritesCounter();
 }
 
-// ==========================
+
 renderCart();
-updateFavoritesCounter(); // ✅ при загрузке страницы
+updateFavoritesCounter(); 

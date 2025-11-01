@@ -1,9 +1,8 @@
-// main.js — замените файл полностью на этот код
+
 document.addEventListener("DOMContentLoaded", () => {
-  // ---- HELPERS ----
+
   const toId = (id) => (id === undefined || id === null ? "" : String(id));
 
-  // ---- FAVORITES ----
   function getFavorites() {
     try {
       const data = JSON.parse(localStorage.getItem("favorites"));
@@ -30,23 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const favoriteEmptySvg = `<svg width="20" height="20" viewBox="0 0 20 20" fill="#888888" xmlns="http://www.w3.org/2000/svg"><path opacity="0.4" d="M1.85938 11.7344L8.91797 18.3242C9.21094 18.5977 9.59766 18.75 10 18.75C10.4023 18.75 10.7891 18.5977 11.082 18.3242L18.1406 11.7344C19.3281 10.6289 20 9.07815 20 7.45706V7.23049C20 4.50003 18.0273 2.1719 15.3359 1.72268C13.5547 1.42581 11.7422 2.00784 10.4688 3.28128L10 3.75003L9.53125 3.28128C8.25781 2.00784 6.44531 1.42581 4.66406 1.72268C1.97266 2.1719 0 4.50003 0 7.23049V7.45706C0 9.07815 0.671875 10.6289 1.85938 11.7344Z"/></svg>`;
 
   function toggleFavorite(product, button) {
-    // product must be an object with id
     const favorites = getFavorites();
     const pid = toId(product.id);
     const index = favorites.findIndex((p) => toId(p.id) === pid);
 
     if (index === -1) {
-      // add
       favorites.push({ ...product, id: pid });
       if (button) button.innerHTML = favoriteFilledSvg;
     } else {
-      // remove
       favorites.splice(index, 1);
       if (button) button.innerHTML = favoriteEmptySvg;
     }
 
     saveFavorites(favorites);
-    // refresh all heart icons on page to reflect current state
     refreshFavoriteButtons();
   }
 
@@ -55,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function refreshFavoriteButtons() {
-    // finds all product-card elements with data-id and sets their heart according to favorites
     document.querySelectorAll(".product-card").forEach((card) => {
       const pid = toId(card.dataset.id);
       const favBtn = card.querySelector('[data-action="favorite"]');
@@ -66,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFavoritesCounter();
   }
 
-  // ---- CART (unchanged logic but robustified) ----
+
   function getCart() {
     try {
       const data = JSON.parse(localStorage.getItem("cart"));
@@ -103,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ---- STARS (kept as-is) ----
+
   function fullStar() {
     return `<svg width="20" height="20" viewBox="0 0 20 20" fill="#6682A9" xmlns="http://www.w3.org/2000/svg"><path d="M10.0001 14.3916L15.1501 17.5L13.7834 11.6416L18.3334 7.69996L12.3417 7.19163L10.0001 1.66663L7.65841 7.19163L1.66675 7.69996L6.21675 11.6416L4.85008 17.5L10.0001 14.3916Z" fill="#6682A9"/></svg>`;
   }
@@ -124,9 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return html;
   }
 
-  // ---- PRODUCT CARD ----
+
   function createProductCard(product) {
-    // Make sure product.id is string
     const pid = toId(product.id);
     const favorites = getFavorites();
     const isFav = favorites.some((p) => toId(p.id) === pid);
@@ -169,13 +162,11 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    // favorite click
     const favBtn = card.querySelector('[data-action="favorite"]');
     if (favBtn) {
       favBtn.addEventListener("click", () => toggleFavorite({ ...product, id: pid }, favBtn));
     }
 
-    // cart
     const cartBtn = card.querySelector('[data-action="add-to-cart"]');
     const cart = getCart();
     const isInCart = cart.some((p) => toId(p.id) === pid);
@@ -202,7 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return card;
   }
 
-  // ---- RENDER BY TAGS ----
   function renderProductsByTags(products) {
     const containers = {
       popular: document.getElementById("popular-products"),
@@ -220,12 +210,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (c) c.appendChild(createProductCard(p));
       });
     });
-    // sync UI
+
     refreshFavoriteButtons();
     updateCartCounter();
   }
 
-  // ---- SEARCH ----
   function initSearch(allProducts) {
     const inputs = [document.getElementById("search-input"), document.getElementById("menu-search-input")].filter(Boolean);
     inputs.forEach((input) => {
@@ -236,7 +225,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ---- FETCH ----
   async function fetchProducts() {
     try {
       const res = await fetch("https://68fae18894ec96066023c657.mockapi.io/api/v2/products");
@@ -248,7 +236,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ---- MENU CLOSE ----
   function closeMobileMenuOnLinkClick() {
     const menuToggle = document.getElementById("menu-toggle");
     if (!menuToggle) return;
@@ -259,10 +246,9 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  // ---- SYNC BETWEEN TABS ----
   window.addEventListener("storage", (e) => {
     if (e.key === "favorites") {
-      // update icons + counter
+
       refreshFavoriteButtons();
     }
     if (e.key === "cart") {
@@ -270,7 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ---- INIT ----
   fetchProducts();
   updateFavoritesCounter();
   updateCartCounter();
