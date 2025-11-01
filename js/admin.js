@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
       fetchProducts();
     } catch (err) {
-      console.error("❌ Xatolik: saqlashda muammo", err);
+      console.error("Xatolik: saqlashda muammo", err);
     }
   });
 
