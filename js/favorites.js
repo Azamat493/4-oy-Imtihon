@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const desc = p.description || "Без описания";
     const price = p.price_uzs?.toLocaleString() || "0";
     const disc = p.discountPercent ? `<span class="absolute bottom-0 ml-3 bg-[#fff7fc] text-[#f00] w-[51px] h-[22px] rounded-[15px] font-bold text-base">-${p.discountPercent}%</span>` : "";
-    const stock = p.inStock === false ? `<span class="bg-[#ffe2e5] font-bold text-sm text-[#f64e60] text-center w-[120px] h-[18px] rounded-[15px]">Нет в наличии</span>` : "";
+    const stock = p.inStock === false ? `<span class="bg-[#ffe2e5] font-bold text-sm text-center text-[#f64e60] font-family w-[120px] h-[18px] rounded-[15px]">Нет в наличии</span>` : "";
 
     card.innerHTML = `
       <div class="overflow-hidden relative">
