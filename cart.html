@@ -27,20 +27,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <style>
-      .swiper-button-next::after,
-      .swiper-button-prev::after {
-        font-size: 18px !important;
-        color: #0f55cf !important;
-        font-weight: bold;
-      }
-      @media (max-width: 548px) {
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-          font-size: 15px !important;
-        }
-      }
-    </style>
   </head>
   <body>
     <header class="bg-white sticky top-0 z-999">
@@ -539,30 +525,30 @@
             <div class="flex items-center gap-4">
               <a href="./cart.html">
                 <button class="group relative">
-                <span
-                  id="cart-counter-mobile"
-                  class="absolute -top-2 right-0 bg-blue-600 text-white text-[10px] sm:text-xs w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center rounded-full"
-                  >0</span
-                >
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 23 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="transition-transform cursor-pointer duration-300 ease-in-out group-hover:scale-110"
-                >
-                  <path
-                    opacity="0.4"
-                    d="M6.66797 11.25H17.9375C19.2109 11.25 20.3242 10.3984 20.6523 9.16797L22.2539 3.21875C22.5234 2.22656 21.7734 1.25 20.7461 1.25H4.69141C4.76953 1.41406 4.82813 1.59375 4.86328 1.77734L6.66797 11.25Z"
-                    fill="#6682A9"
-                  />
-                  <path
-                    d="M0 0.9375C0 0.417969 0.417969 0 0.9375 0H2.71484C3.76562 0 4.66797 0.746094 4.86328 1.77734L6.87891 12.3633C6.96484 12.8047 7.35156 13.125 7.80078 13.125H19.0625C19.582 13.125 20 13.543 20 14.0625C20 14.582 19.582 15 19.0625 15H7.80078C6.44922 15 5.28906 14.0391 5.03906 12.7148L3.02344 2.12891C2.99609 1.98047 2.86719 1.875 2.71484 1.875H0.9375C0.417969 1.875 0 1.45703 0 0.9375ZM5 18.125C5 17.8788 5.0485 17.635 5.14273 17.4075C5.23695 17.18 5.37506 16.9733 5.54917 16.7992C5.72328 16.6251 5.92998 16.487 6.15747 16.3927C6.38495 16.2985 6.62877 16.25 6.875 16.25C7.12123 16.25 7.36505 16.2985 7.59253 16.3927C7.82002 16.487 8.02672 16.6251 8.20083 16.7992C8.37494 16.9733 8.51305 17.18 8.60727 17.4075C8.7015 17.635 8.75 17.8788 8.75 18.125C8.75 18.3712 8.7015 18.615 8.60727 18.8425C8.51305 19.07 8.37494 19.2767 8.20083 19.4508C8.02672 19.6249 7.82002 19.763 7.59253 19.8573C7.36505 19.9515 7.12123 20 6.875 20C6.62877 20 6.38495 19.9515 6.15747 19.8573C5.92998 19.763 5.72328 19.6249 5.54917 19.4508C5.37506 19.2767 5.23695 19.07 5.14273 18.8425C5.0485 18.615 5 18.3712 5 18.125ZM18.125 16.25C18.6223 16.25 19.0992 16.4475 19.4508 16.7992C19.8025 17.1508 20 17.6277 20 18.125C20 18.6223 19.8025 19.0992 19.4508 19.4508C19.0992 19.8025 18.6223 20 18.125 20C17.6277 20 17.1508 19.8025 16.7992 19.4508C16.4475 19.0992 16.25 18.6223 16.25 18.125C16.25 17.6277 16.4475 17.1508 16.7992 16.7992C17.1508 16.4475 17.6277 16.25 18.125 16.25Z"
-                    fill="#6682A9"
-                  />
-                </svg>
-              </button>
+                  <span
+                    id="cart-counter-mobile"
+                    class="absolute -top-2 right-0 bg-blue-600 text-white text-[10px] sm:text-xs w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center rounded-full"
+                    >0</span
+                  >
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 23 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-transform cursor-pointer duration-300 ease-in-out group-hover:scale-110"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M6.66797 11.25H17.9375C19.2109 11.25 20.3242 10.3984 20.6523 9.16797L22.2539 3.21875C22.5234 2.22656 21.7734 1.25 20.7461 1.25H4.69141C4.76953 1.41406 4.82813 1.59375 4.86328 1.77734L6.66797 11.25Z"
+                      fill="#6682A9"
+                    />
+                    <path
+                      d="M0 0.9375C0 0.417969 0.417969 0 0.9375 0H2.71484C3.76562 0 4.66797 0.746094 4.86328 1.77734L6.87891 12.3633C6.96484 12.8047 7.35156 13.125 7.80078 13.125H19.0625C19.582 13.125 20 13.543 20 14.0625C20 14.582 19.582 15 19.0625 15H7.80078C6.44922 15 5.28906 14.0391 5.03906 12.7148L3.02344 2.12891C2.99609 1.98047 2.86719 1.875 2.71484 1.875H0.9375C0.417969 1.875 0 1.45703 0 0.9375ZM5 18.125C5 17.8788 5.0485 17.635 5.14273 17.4075C5.23695 17.18 5.37506 16.9733 5.54917 16.7992C5.72328 16.6251 5.92998 16.487 6.15747 16.3927C6.38495 16.2985 6.62877 16.25 6.875 16.25C7.12123 16.25 7.36505 16.2985 7.59253 16.3927C7.82002 16.487 8.02672 16.6251 8.20083 16.7992C8.37494 16.9733 8.51305 17.18 8.60727 17.4075C8.7015 17.635 8.75 17.8788 8.75 18.125C8.75 18.3712 8.7015 18.615 8.60727 18.8425C8.51305 19.07 8.37494 19.2767 8.20083 19.4508C8.02672 19.6249 7.82002 19.763 7.59253 19.8573C7.36505 19.9515 7.12123 20 6.875 20C6.62877 20 6.38495 19.9515 6.15747 19.8573C5.92998 19.763 5.72328 19.6249 5.54917 19.4508C5.37506 19.2767 5.23695 19.07 5.14273 18.8425C5.0485 18.615 5 18.3712 5 18.125ZM18.125 16.25C18.6223 16.25 19.0992 16.4475 19.4508 16.7992C19.8025 17.1508 20 17.6277 20 18.125C20 18.6223 19.8025 19.0992 19.4508 19.4508C19.0992 19.8025 18.6223 20 18.125 20C17.6277 20 17.1508 19.8025 16.7992 19.4508C16.4475 19.0992 16.25 18.6223 16.25 18.125C16.25 17.6277 16.4475 17.1508 16.7992 16.7992C17.1508 16.4475 17.6277 16.25 18.125 16.25Z"
+                      fill="#6682A9"
+                    />
+                  </svg>
+                </button>
               </a>
               <button class="flex cursor-pointer group items-center gap-2">
                 <svg
@@ -618,322 +604,50 @@
       </div>
     </header>
     <main>
-      <section
-        class="md:mt-8 mt-3 w-[82%] max-w-[1920px] gap-10 sm:flex hidden mx-auto overflow-hidden"
-      >
-        <div class="swiper mySwiper relative">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div
-                class="w-full z-10 h-full flex items-center justify-center rounded-[20px] overflow-hidden"
-              >
-                <img
-                  src="/images/pollwon_desktop.webp"
-                  alt="Баннер"
-                  class="md:w-[95%] w-full h-full rounded-[20px] object-contain"
-                />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="w-full z-10 h-full flex items-center justify-center rounded-[20px] overflow-hidden"
-              >
-                <img
-                  src="/images/resanta-desk.webp"
-                  alt="Баннер"
-                  class="md:w-[95%] w-full h-full rounded-[20px] object-contain"
-                />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="w-full h-full flex z-10 items-center justify-center rounded-[20px] overflow-hidden"
-              >
-                <img
-                  src="/images/crown-desk.webp"
-                  alt="Баннер"
-                  class="md:w-[95%] w-full h-full rounded-[20px] object-contain"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination sm:block! hidden!"></div>
-          <div
-            class="swiper-button-prev sm:flex! hidden! bg-white rounded-full! p-7! z-5 hover:shadow-xl transition scale-60! sm:scale-90!"
-          ></div>
-          <div
-            class="swiper-button-next sm:flex! hidden! bg-white rounded-full! p-7! z-5 hover:shadow-xl transition scale-60! sm:scale-90!"
-          ></div>
-        </div>
-      </section>
-
-      <section class="block sm:hidden max-w-[1920px] w-full p-5">
-        <img src="./images/Link1.png" alt="" />
-      </section>
-
-      <section>
-        <div class="max-w-[1920px] w-[82%] mx-auto px-4 py-2">
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 justify-items-center"
-          >
+      <section class="bg-gray-50 py-8">
+        <div class="max-w-[1920px] w-[80%] mx-auto px-4">
+          <h2 class="text-xl font-bold mb-6">
+            Корзина (<span class="cart-count">0</span> товаров)
+          </h2>
+          <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
             <div
-              class="bg-[#eee] p-4 border border-gray-200 flex flex-col items-center w-full max-w-[265px] h-[180px] md:h-auto xll:h-[180px] rounded-[5px] justify-between"
-            >
-              <div>
-                <h3
-                  class="font-bold text-lg text-center text-black font-family mb-2"
-                >
-                  Добро пожаловать!
-                </h3>
-                <p
-                  class="font-normal text-[13px] text-center text-black font-family mb-4"
-                >
-                  Войдите, чтобы оставлять отзывы и пользоваться другими
-                  функциями авторизованных пользователей.
-                </p>
+              id="cart-items"
+              class="lg:col-span-2 bg-white rounded-lg p-4 sm:p-6 space-y-4 sm:space-y-6"
+            ></div>
+            <div class="bg-white rounded-lg p-4 md:p-6">
+              <div
+                class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3"
+              >
+                <h3 class="text-lg font-bold mb-2 md:mb-0">Итого</h3>
+                <div class="text-2xl font-bold" id="cart-total-header">
+                  0 сум
+                </div>
+              </div>
+              <div class="space-y-3 mt-4 mb-6 text-sm md:text-base">
+                <div class="flex justify-between">
+                  <span>Товары, <span class="cart-count">0</span> шт.</span>
+                  <span class="cart-total">0 сум</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Доставка</span>
+                  <span>Бесплатная</span>
+                </div>
               </div>
               <button
-                class="w-full bg-[#5d78ff] hover:bg-blue-700 py-2 px-4 rounded-md font-medium text-sm text-center text-white font-family transition-colors"
+                class="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition-colors mb-4"
               >
-                Войти в личный кабинет
+                Перейти к оформлению
               </button>
-            </div>
-
-            <div
-              class="bg-[#d1dae6] p-[20px_40px_20px_20px] justify-center border border-gray-200 flex flex-col items-center w-full max-w-[265px] h-[180px] md:h-auto xll:h-[180px] rounded-[5px]"
-            >
-              <div class="flex items-center">
-                <h1
-                  class="font-bold text-lg text-center text-[#6682a9] font-family"
-                >
-                  Покупать как юрлицо
-                </h1>
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.25 4.5H30.75C31.1625 4.5 31.5 4.8375 31.5 5.25V9H16.5V5.25C16.5 4.8375 16.8375 4.5 17.25 4.5ZM12 5.25V9H6C2.69063 9 0 11.6906 0 15V24H18H30H48V15C48 11.6906 45.3094 9 42 9H36V5.25C36 2.35313 33.6469 0 30.75 0H17.25C14.3531 0 12 2.35313 12 5.25ZM48 27H30V30C30 31.6594 28.6594 33 27 33H21C19.3406 33 18 31.6594 18 30V27H0V39C0 42.3094 2.69063 45 6 45H42C45.3094 45 48 42.3094 48 39V27Z"
-                    fill="#6682A9"
-                  />
-                </svg>
+              <div class="flex items-start space-x-2 text-sm">
+                <input type="checkbox" id="terms" class="mt-1" checked />
+                <label for="terms">
+                  Согласен с условиями
+                  <a href="#" class="text-blue-600 hover:underline"
+                    >Правил пользования</a
+                  ><br />
+                  торговой площадкой и правилами возврата
+                </label>
               </div>
-            </div>
-
-            <div
-              class="bg-[#dbe1ff] p-[20px] justify-center border border-gray-200 flex flex-col items-center w-full max-w-[265px] h-[180px] md:h-auto xll:h-[180px] rounded-[5px]"
-            >
-              <div class="flex flex-col items-center">
-                <img src="./images/doczon-logo.73cc8cda.svg fill.png" alt="" />
-                <p
-                  class="mt-3 leading-tight font-bold text-lg text-center text-[#011c47] font-family"
-                >
-                  Электронный документооборот
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="bg-[linear-gradient(180deg,#671abf_20%,#a03291_70%,#d24089_100%)] p-[20px] justify-center border border-gray-200 flex flex-col items-center w-full max-w-[265px] h-[180px] md:h-auto xll:h-[180px] rounded-[5px]"
-            >
-              <div class="flex flex-col items-center">
-                <img src="./images/docZon.png" alt="" />
-                <p
-                  class="mt-3 leading-tight font-bold text-lg text-center text-white font-family"
-                >
-                  Онлайн меню для ресторанов и гостиниц
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="max-w-[1920px] w-[90%] md:w-[85%] lg:w-[78%] mx-auto mt-10"
-      >
-        <h2
-          class="font-medium text-[23px] tracking-[0.02em] text-black font-family mb-5"
-        >
-          Популярные
-        </h2>
-        <div
-          id="popular-products"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-6"
-        ></div>
-      </section>
-
-      <section
-        class="max-w-[1920px] w-[90%] md:w-[85%] lg:w-[78%] mx-auto mt-10"
-      >
-        <h2
-          class="font-medium text-[23px] tracking-[0.02em] text-black font-family mb-5"
-        >
-          Бестселлеры
-        </h2>
-        <div
-          id="bestseller-products"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-6"
-        ></div>
-      </section>
-
-      <section
-        class="max-w-[1920px] w-[90%] md:w-[85%] lg:w-[78%] mx-auto mt-10"
-      >
-        <h2
-          class="font-medium text-[23px] tracking-[0.02em] text-black font-family mb-5"
-        >
-          Новинки
-        </h2>
-        <div
-          id="new-products"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-6"
-        ></div>
-      </section>
-
-      <section
-        class="max-w-[1920px] w-[90%] md:w-[85%] lg:w-[78%] mx-auto mt-10"
-      >
-        <h2
-          class="font-medium text-[23px] tracking-[0.02em] text-black font-family mb-5"
-        >
-          Товары со скидкой
-        </h2>
-        <div
-          id="discount-products"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-6"
-        ></div>
-      </section>
-
-      <section
-        class="max-w-[1920px] w-[90%] sm:w-[85%] md:w-[80%] lg:w-[77%] mx-auto mt-5"
-      >
-        <div
-          class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-10"
-        >
-          <h1
-            class="font-medium text-xl sm:text-2xl tracking-[0.02em] text-black font-family"
-          >
-            Статьи
-          </h1>
-          <button
-            class="border cursor-pointer w-[129px] h-[29px] rounded-[15px] border-solid border-[#ddd] font-medium text-[15px] tracking-[0.03em] text-[#1b7da2] font-family hover:bg-[#1b7da2] hover:text-white hover:border-[#1b7da2] transition-colors duration-300"
-          >
-            Смотреть все
-          </button>
-        </div>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 mt-5 gap-4 sm:gap-5 md:gap-6"
-        >
-          <div
-            class="flex flex-col border border-[#e5e7eb] rounded-[5px] overflow-hidden"
-          >
-            <img
-              src="./images/Виброметры для двигателей и механизмов.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-2 flex flex-col gap-1">
-              <p
-                class="font-normal text-[14px] sm:text-[15px] text-[#6682a9] font-family"
-              >
-                13.06.2023
-              </p>
-              <h2
-                class="font-normal text-[14px] sm:text-[15px] text-[#000] leading-snug font-family"
-              >
-                Виброметры для двигателей и механизмов
-              </h2>
-            </div>
-          </div>
-          <div
-            class="flex flex-col border border-[#e5e7eb] rounded-[5px] overflow-hidden"
-          >
-            <img
-              src="./images/Частотный преобразователь — что такое и для чего он нужен.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-2 flex flex-col gap-1">
-              <p
-                class="font-normal text-[14px] sm:text-[15px] text-[#6682a9] font-family"
-              >
-                12.06.2023
-              </p>
-              <h2
-                class="font-normal text-[14px] sm:text-[15px] text-[#000] leading-snug font-family"
-              >
-                Частотный преобразователь — что такое и для чего он нужен
-              </h2>
-            </div>
-          </div>
-
-          <div
-            class="flex flex-col border border-[#e5e7eb] rounded-[5px] overflow-hidden"
-          >
-            <img
-              src="./images/Зачем нужен такой прибор, как лазерный тахометр_.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-2 flex flex-col gap-1">
-              <p
-                class="font-normal text-[14px] sm:text-[15px] text-[#6682a9] font-family"
-              >
-                11.06.2023
-              </p>
-              <h2
-                class="font-normal text-[14px] sm:text-[15px] text-[#000] leading-snug font-family"
-              >
-                Зачем нужен такой прибор, как лазерный тахометр?
-              </h2>
-            </div>
-          </div>
-
-          <div
-            class="flex flex-col border border-[#e5e7eb] rounded-[5px] overflow-hidden"
-          >
-            <img
-              src="./images/Люксометр - Измеритель яркости и освещённости.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-2 flex flex-col gap-1">
-              <p
-                class="font-normal text-[14px] sm:text-[15px] text-[#6682a9] font-family"
-              >
-                10.04.2023
-              </p>
-              <h2
-                class="font-normal text-[14px] sm:text-[15px] text-[#000] leading-snug font-family"
-              >
-                Люксометр - Измеритель яркости и освещённости
-              </h2>
-            </div>
-          </div>
-
-          <div
-            class="flex flex-col border border-[#e5e7eb] rounded-[5px] overflow-hidden"
-          >
-            <img
-              src="./images/Термометр для измерения температуры объекта.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-2 flex flex-col gap-1">
-              <p
-                class="font-normal text-[14px] sm:text-[15px] text-[#6682a9] font-family"
-              >
-                09.04.2023
-              </p>
-              <h2
-                class="font-normal text-[14px] sm:text-[15px] text-[#000] leading-snug font-family"
-              >
-                Термометр для измерения температуры объекта
-              </h2>
             </div>
           </div>
         </div>
@@ -1178,33 +892,7 @@
         </div>
       </div>
     </footer>
-    <script>
-      document.addEventListener("click", function (e) {
-        document.querySelectorAll("details").forEach((details) => {
-          if (!details.contains(e.target)) {
-            details.removeAttribute("open");
-          }
-        });
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".mySwiper", {
-        loop: false,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-    <script src="../js/main.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>
